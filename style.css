@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0;padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+body{
+    background: hsl(30, 38%, 92%);;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* * * * * Main SECTION * * * * */
+.cards{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+/* * * * * STYLE FOR MAIN CONTAINER * * * * */
+.card1{
+    width: 300px;
+    height: 500px;
+    background-size: cover;
+    background-image: url(images/image-product-desktop.jpg);
+}
+.card2{
+    width: 300px;
+    height: 500px;
+    padding: 30px;
+    background: hsl(0, 0%, 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+
+/* * * * * Media Query For Mobile-Screen * * * * */
+@media (max-width: 700px){
+    .cards{
+        height: 600px;
+        min-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 50px 0;
+    }
+    .card1{
+        height: 30%;
+        background-image: url(images/image-product-mobile.jpg);
+    }
+    .card2{height: 70%; padding: 20px}
+}
+
+
+
+/* * * * * STYLE FOR HEADING * * * * */
+.card2 h1{
+    font-size: 35px;
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif;
+}
+
+
+
+/* * * * * STYLE FOR PARAGRAPH * * * * */
+.card2 p:first-child{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.card2 p{
+    color: hsl(228, 12%, 48%);
+    line-height: 25px;
+}
+
+
+
+
+/* * * * * STYLE FOR Price DIV * * * * */
+.card2 .price{
+    display: flex;
+    align-items: center;
+}
+.card2 .price h1{
+    color: hsl(158, 36%, 37%);
+    margin-right:20px
+}
+.card2 .price p{position: relative;}
+.card2 .price p::after{
+    content: "";
+
+    position: absolute;
+    top: 11px; left: -3px;
+    
+    width: 60px; height: 1px;
+    background: hsl(228, 12%, 48%);
+}
+
+
+
+/* * * * * STYLE FOR BUTTONS * * * * */
+.card2 button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 15px;
+    border:none;
+    border-radius: 10px;
+
+    color: hsl(0, 0%, 100%);
+    background: hsl(158, 36%, 37%);
+}
+button img{margin-right: 10px;}
+
+/* * * * * HOVER BUTTONS * * * * */
+.card2 button:hover{
+    transition: .5s ease-in-out;
+    background: hsl(158, 36%, 20%);;
+    cursor: pointer;
+}
